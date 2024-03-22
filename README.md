@@ -53,5 +53,12 @@ Thread lain yang belum mendapatkan task dalam thread pool tetap tersedia untuk m
 Jika sebuah thread menyelesaikan task-nya, dia kembali menjadi thread idle yang dapat dipakai kembali.
 Thread pool membuat server dapat memproses secara bersamaan sehingga meningkatkan throughput aplikasi
 
+__Commit Bonus Reflection notes__
 
+Perbedaan new dan build function adalah saat mereka mengurus kasus saat size Threadpool 0.
+Function new akan menghentikan program jika size Thread pool 0 dan memberikan error message. Sedangkan,
+function build mengembalikan Err(PoolCreationError) dengan message yang menginfokan bahwa ukuran Thread pool
+masih 0. Jadi perbedaan keduanya terletak pada cara menangani situasi dimana size Thread pool adalah 0. Fungsi build 
+yang menggunakan Err(PoolCreationError) memberi opsi tambahan bagi programmer, seperti membuat predefined error message
+kemudian menghentikan program
 
