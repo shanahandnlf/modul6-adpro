@@ -39,6 +39,12 @@ dari kode ini
 
 __Commit 4__
 
+Saat mengakses endpoint /sleep, aplikasi membutuhkan waktu yang lama (10 detik) untuk memprosesnya. Ketika kita mencoba
+mengakses endpoint lain pada tab browser baru, aplikasi harus menyelesaikan proses loading di endpoint /sleep dulu.
+Hal ini membuat endpoint lain harus menunggu /sleep selesai loading dulu agar bisa diproses. Padahal endpoint selain /sleep
+dapat diproses oleh mesin secara cepat. Secara keseluruhan, ini membuat masalah performa karena 
+saat mengakses endpoint /sleep yang membutuhkan banyak waktu akan memperlambat performa aplikasi.
+
 __Commit 5__
 
 
