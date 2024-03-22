@@ -29,6 +29,14 @@ What does the additional line of code in handle_connection do?
 
 __Commit 3__
 
+![Commit 3 picture](assets/images/commit3.png)
+
+Saya menggunakan if-else conditional yang akan membaca request_line. Kalau request_line
+berisi "GET / HTTP/1.1" maka kode akan memberikan file hello.html. Sebaliknya, jika
+tidak memberikan request sesuai makan akan menampilkan file bad.html. Refactoring kode dilakukan agar
+kode menjadi lebih mudah dibaca dan lebih mudah dimodifikasi di masa depan. Hal ini akan meningkatkan maintainability
+dari kode ini
+
 __Commit 4__
 
 __Commit 5__
