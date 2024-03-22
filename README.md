@@ -47,5 +47,11 @@ saat mengakses endpoint /sleep yang membutuhkan banyak waktu akan memperlambat p
 
 __Commit 5__
 
+Thread pool adalah kumpulan thread yang di-spawned dan akan menunggu untuk meng-handle sebah task.
+Program akan memberikan task ke salah satu thread pada thread pool ketika mendapatkan task baru.
+Thread lain yang belum mendapatkan task dalam thread pool tetap tersedia untuk menyelesaikan task baru lain yang masuk.
+Jika sebuah thread menyelesaikan task-nya, dia kembali menjadi thread idle yang dapat dipakai kembali.
+Thread pool membuat server dapat memproses secara bersamaan sehingga meningkatkan throughput aplikasi
+
 
 
